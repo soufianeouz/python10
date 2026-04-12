@@ -58,12 +58,12 @@ def spell_dispatcher() -> Callable[[Any], str]:
 if __name__ == "__main__":
     print("\nTesting spell reducer...")
     spell_powers = [13, 23, 25, 19, 20]
-    print(f"Sum: {spell_reducer(spell_powers, "add")}")
+    print(f"Sum: {spell_reducer(spell_powers, 'add')}")
     spell_powers = [2, 2, 2, 3, 10000]
-    print(f"Product: {spell_reducer(spell_powers, "multiply")}")
+    print(f"Product: {spell_reducer(spell_powers, 'multiply')}")
     spell_powers = [23, 25, 5, 40]
-    print(f"Max: {spell_reducer(spell_powers, "max")}")
-    print(spell_reducer([1,2,3], "add"))
+    print(f"Max: {spell_reducer(spell_powers, 'max')}")
+    # print(spell_reducer([1,2,3], "add"))
     
     print("\nTesting memoized fibonacci...")
     print(f"Fib(0): {memoized_fibonacci(0)}")
@@ -73,6 +73,6 @@ if __name__ == "__main__":
     print("\nTesting spell dispatcher...")
     test_spell = spell_dispatcher()
     print(f"Damage spell: {test_spell(42)}")
-    print(f"Enchantment: {test_spell("fireball")}")
+    print(f"Enchantment: {test_spell('fireball')}")
     print(f"Multi-cast: {test_spell([1,2,3])}")
     print(test_spell({"key": "value"}))
